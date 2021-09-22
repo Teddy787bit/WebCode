@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="popup">
+        <div class="ContentBox">
+            <div class="close">
+            </div>
+            <div class="imgbox">
+                <img src="1_lastminutedeals.jpg" alt="">
+            </div>
+            <div class="content">
+                <div>
+                <h3>Special Offers</h3>
+                <h2>10-40<sup>%</sup><span>Discount</span></h2>
+                <p>Vesta Hotels & Resorts offers last minute 
+                    discounted deals to travellers booking 24 hours 
+                    prior to their stay. 
+                    Discounts range from 10%-40% depending on room availability.</p>
+                <a href="#">More Offers</a> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Automatic Show Pop Up After 1Sec -->
+    <script>
+        const popup=document.querySelector('.popup');
+        const close=document.querySelector('.close');
+        window.onload=function(){
+            setTimeout(function(){
+                popup.style.display = "block"
+            },2000)
+        }
+        colse.addEventListener('Click',() => {
+            // popup.style.display = "none"; 
+            alert("Hello")
+        }
+         )
+
+    </script>
+</body>
+
+</html>
