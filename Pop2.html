@@ -10,9 +10,9 @@
 <body>
     <div class="popup">
         <div class="ContentBox">
-            <div class="close">
+            <div class="close" >
             </div>
-            <div class="imgbox">
+            <div class="imgbox" >
                 <img src="1_lastminutedeals.jpg" alt="">
             </div>
             <div class="content">
@@ -30,6 +30,7 @@
     </div>
     <!-- Automatic Show Pop Up After 1Sec -->
     <script>
+        
         const popup=document.querySelector('.popup');
         const close=document.querySelector('.close');
         window.onload=function(){
@@ -37,13 +38,11 @@
                 popup.style.display = "block"
             },2000)
         }
-        colse.addEventListener('click',() => {
-            // popup.style.display = "none"; 
-            alert("Hello")
+        close.addEventListener('click',() => {
+             popup.style.display = "none"; 
         }
          )
-// Hello
-// Hello2
+         
     </script>
 </body>
 
