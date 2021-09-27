@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PopUp</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="/Css/Style.css">
 </head>
 <body>
     <div class="popup">
@@ -13,7 +13,7 @@
             <div class="close" >
             </div>
             <div class="imgbox" >
-                <img src="1_lastminutedeals.jpg" alt="">
+                <img src="/Images/1_lastminutedeals.jpg" alt="">
             </div>
             <div class="content">
                 <div>
@@ -23,7 +23,10 @@
                     discounted deals to travellers booking 24 hours 
                     prior to their stay. 
                     Discounts range from 10%-40% depending on room availability.</p>
-                <a href="#">More Offers</a> 
+                    <div class="button">
+                    <a href="#">More Offers</a>
+                    <a href="" id="close">Close</a>
+                </div>
                 </div>
             </div>
         </div>
@@ -37,6 +40,10 @@
             setTimeout(function(){
                 popup.style.display = "block"
             },2000)
+        $('body').css({'overflow':'hidden'});
+        $(document).bind('scroll',function () { 
+        window.scrollTo(0,0); 
+  });
         }
         close.addEventListener('click',() => {
              popup.style.display = "none"; 

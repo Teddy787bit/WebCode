@@ -74,14 +74,23 @@ align-items: center;
     font-weight: 200;
     font-size: 15px;
 }
+.ContentBox .content .button{
+display: flex;
+border: #ff4d54 solid 2px;
+}
 .ContentBox .content a{
     display: inline-block;
     padding: 10px 20px ;
     background: chocolate;
     margin-top: 15px;
+    margin-right: 20px;
     text-decoration: none;
     border-radius: 10px;
     color: white;
+
+}
+.ContentBox .content a #close{
+    color: red;
 }
 .close{
     position: absolute;
@@ -89,7 +98,7 @@ align-items: center;
     right: 6px;
     width: 30px;
     height: 30px;
-    background: rgb(219, 219, 219) url(close16.png);
+    background: rgb(219, 219, 219) url(../Images/close.png);
     background-repeat: no-repeat;
     background-size: 10px;
     background-position: center;
