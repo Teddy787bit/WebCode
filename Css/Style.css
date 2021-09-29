@@ -106,3 +106,35 @@ border: #ff4d54 solid 2px;
     border-radius: 50%;
     z-index: 10;
 }
+/*Responsive */
+@media(max-width: 767px)
+{
+    .ContentBox{
+        width:300px;
+        height: auto;
+        flex-direction: column;
+    }
+    .ContentBox .imgbox{
+       height: auto;
+        border: hotpink 2px solid;
+    }
+    .ContentBox .content{
+
+        height :auto;
+        text-align: center;
+        padding: 20px;
+        padding-top: 0;
+    }
+    .close{
+    top:-5px;
+    right: -20px;
+    background: #fff url(../Images/close.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    cursor: pointer;   
+    border-radius: 50%;
+    z-index: 10;
+    }
+}
+
