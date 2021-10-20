@@ -1,5 +1,6 @@
 const { write } = require('@fast-csv/format');
 var mongoose=require('mongoose');
+var db = require('../database');
 // create an schema
 var MedicineSchema = new mongoose.Schema({
         c_name:{type:String,required:true},
@@ -14,12 +15,17 @@ var MedicineSchema = new mongoose.Schema({
         hsn_code: {type:String,required:true},
         });
 medicineTable=mongoose.model('MedicineDataset',MedicineSchema);
+module.exports
+/*
 module.exports={
      fetchData:function(callback){
         var medicineData=medicineTable.find({});
         medicineData.exec(function(err, data){
             if(err) throw err;
+            if(data){
+                console.log(data);
+            }
             return callback(data);
         })
      }
-}
+}*/
