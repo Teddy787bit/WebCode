@@ -1,33 +1,18 @@
-const mongodb = require("mongodb").MongoClient;
-const csvtojson = require("csvtojson");
 const express = require('express');
-// let url = "mongodb://username:password@localhost:27017/";
-let url = "mongodb://localhost:27017/";
-/*
-csvtojson()
-  .fromFile("file/MedicineDataSet (2).csv")
-  .then(csvData => {
-    console.log(csvData);
+const path = require('path');
+const app=express();
+const ejs = require('ejs');
 
-    mongodb.connect(
-      url,
-      { useNewUrlParser: true, useUnifiedTopology: true },
-      (err, client) => {
-        if (err) throw err;
-
-        client
-          .db("csv_db")
-          .collection("MedicineDataset")
-          .insertMany(csvData, (err, res) => {
-            if (err) throw err;
-
-            console.log(`Inserted: ${res.insertedCount} rows`);
-            client.close();
-          });
-      }
-    );
-  });
-  */
- 
+  const port = 3000;
+  app.get('/', (req, res) => {
+    res.send('Hello World!')
+  })
+  var fetchRouter = require('./routes/fetch-route');
+  app.use('/', fetchRouter);
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+  })
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
   var fetchRouter = require('./routes/fetch-route');
   app.use('/', fetchRouter);

@@ -31,25 +31,33 @@
     <table border="1" >
         <tr>
             <th>S.N</th>
-            <th>Full Name</th>
-            <th>Email Address</th>
-            <th>City</th>
-            <th>Country</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Medicine Name</th>
+            <th>Batch Number</th>
+            <th>Ex Date/th>
+            <th>Qty</th>
+            <th>Shema</th>
+            <th>MRP</th>
+            <th>Manuf</th>
+            <th>Hsn Code</th>
         </tr>
         
         <%
-        if(userData.length!=0){
+        if(medicineData.length!=0){
         var i=1;
-        userData.forEach(function(data){
+        medicineData.forEach(function(data){
         %>
         <tr>
             <td><%=i; %></td>
-            <td><%=data.full_name %></td>
-            <td><%=data.email_adress %></td>
-            <td><%=data.city %></td>
-            <td><%=data.country %></td>
+            <td><%=data.c_name %></td>
+            <td><%=data.c_batch_no %></td>
+            <td><%=data.d_expiry_date%></td>
+            <td><%=data.n_balance_qty %></td>
+            <td><%=data.c_packaging %></td>
+            <td><%=data.c_unique_code %></td>
+            <td><%=data.c_schemes %></td>
+            <td><%=data.n_mrp%></td>
+            <td><%=data.c_manufacturer %></td>
+            <td><%=data.hsn_code %></td>
             <td><a href="/edit/<%=data.id%>">Edit</a></td>
             <td><a href="/delete/<%=data.id%>">Delete</a></td>
         </tr>
