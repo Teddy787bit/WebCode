@@ -14,8 +14,8 @@ var MedicineSchema = new mongoose.Schema({
         hsn_code : String
         });
 medicineTable=mongoose.model('MedicineDataset',MedicineSchema);
+/*
 module.exports={
-     
      fetchData:function(callback){
         var medicineData=medicineTable.find({});
         medicineData.exec(function(err, data){
@@ -25,3 +25,4 @@ module.exports={
         
      }
 }
+*/

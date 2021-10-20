@@ -32,5 +32,6 @@ router.post('/uploadCsv',(req,res)=>{
     );
   });
 });
-router.get('/GetAll',fetchController.fetchData);
+//router.get('/GetAll',fetchController.fetchData);
+router.get('/GetAll',fetchController);
 module.exports = router;

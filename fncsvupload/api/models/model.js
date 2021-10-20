@@ -14,8 +14,10 @@ var MedicineSchema = new mongoose.Schema({
         c_manufacturer: {type:String,required:true},
         hsn_code: {type:String,required:true},
         });
-medicineTable=mongoose.model('MedicineDataset',MedicineSchema);
-module.exports
+const medicineData=mongoose.model('medicineData',MedicineSchema);
+module.exports= medicineData;
+//medicineTable=mongoose.model('MedicineDataset',MedicineSchema);
+
 /*
 module.exports={
      fetchData:function(callback){
