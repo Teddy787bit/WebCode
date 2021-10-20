@@ -43,7 +43,6 @@
             <th>Manuf</th>
             <th>Hsn Code</th>
         </tr>
-        
         <%
         if(medicineData.length!=0){
         var i=1;
@@ -61,8 +60,6 @@
             <td><%=data.n_mrp%></td>
             <td><%=data.c_manufacturer %></td>
             <td><%=data.hsn_code %></td>
-            <td><a href="/edit/<%=data.id%>">Edit</a></td>
-            <td><a href="/delete/<%=data.id%>">Delete</a></td>
         </tr>
         <%  i++; }) %>
         <% } else{ %>
@@ -70,6 +67,7 @@
                 <td colspan="7">No Data Found</td>
             </tr>
         <% } %>
+        
     </table>
     </div>
 </body>

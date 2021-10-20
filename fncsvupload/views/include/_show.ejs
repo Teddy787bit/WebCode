@@ -1,0 +1,24 @@
+<%
+if(medicineData.length!=0){
+var i=1;
+medicineData.forEach(function(data){
+%>
+<tr>
+    <td><%=i; %></td>
+    <td><%=data.c_name %></td>
+    <td><%=data.c_batch_no %></td>
+    <td><%=data.d_expiry_date%></td>
+    <td><%=data.n_balance_qty %></td>
+    <td><%=data.c_packaging %></td>
+    <td><%=data.c_unique_code %></td>
+    <td><%=data.c_schemes %></td>
+    <td><%=data.n_mrp%></td>
+    <td><%=data.c_manufacturer %></td>
+    <td><%=data.hsn_code %></td>
+</tr>
+<%  i++; }) %>
+<% } else{ %>
+    <tr>
+        <td colspan="7">No Data Found</td>
+    </tr>
+<% } %>
