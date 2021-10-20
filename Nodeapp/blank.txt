@@ -1,0 +1,10 @@
+c_name	
+c_batch_no	
+d_expiry_date	
+n_balance_qty	
+c_packaging	
+c_unique_code	
+c_schemes	
+n_mrp	
+c_manufacturer	
+hsn_code
