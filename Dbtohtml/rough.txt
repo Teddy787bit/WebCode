@@ -1,0 +1,11 @@
+
+c_name = Medicine Name: Name of the medicine
+c_batch_no = Batch Number : Batch Number of the medicine
+d_expiry_date = Expiry Date : expiry date of that batch of the medicine
+n_balance_qty = Balance Quantity : stock quantity of that batch of the medicine.
+c_packaging = Packaging:  packaging of the medicine
+c_unique_code = Unique Code : unique Code specific to this medicine.
+c_schemes : Scheme Scheme of the particular batch of the medicine.
+n_mrp = MRP :  MRP of the medicine
+c_manufacturer= Manufacturer:  manufacturer for the medicine
+hsn_code = HSN Code : HSN no. of the medicine
