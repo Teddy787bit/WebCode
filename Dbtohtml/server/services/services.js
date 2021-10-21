@@ -13,7 +13,8 @@ exports.showdata = (req, res) => {
     // Make a get request to /api/users
     axios.get('http://localhost:3000/api/GetAll')
         .then(function(response){
-            res.render('showdata', { medicine : "new Data" });
+            console.log(response.data)
+            res.render('showdata', { medicine : response.data });
         })
         .catch(err =>{
             res.send(err);
