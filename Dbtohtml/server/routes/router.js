@@ -1,16 +1,17 @@
 const express= require('express');
 const controller = require('../controllers/controller');
-
+const service = require('../services/services');
 const route = express.Router();
 
-route.get('/',(req,res)=>{
+route.get('/',service.homeRoute);
+//Render Files
 
-    res.render('index');
-})
-
+route.get('/GetAll',service.showdata);
 //API
-route.get('/GetAll',controller.find);
+
+route.get('/api/GetAll',controller.find);
 route.post('/uploadCsv',controller.create);
+route.get('/uploadCsv',service.updatecsv);
 
 module.exports=route;
 

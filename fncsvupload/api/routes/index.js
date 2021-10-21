@@ -19,12 +19,12 @@ router.post('/uploadCsv',(req,res)=>{
       url,
       { useNewUrlParser: true, useUnifiedTopology: true },
       (err, client) => {
-        if (err) throw err;
+      
         client
           .db("medicine")
           .collection("MedicineDataset")
           .insertMany(csvData, (err, res) => {
-            if (err) throw err;
+        
             console.log(`Inserted: ${res.insertedCount} rows`);
             client.close();
           });

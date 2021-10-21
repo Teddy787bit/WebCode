@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const indexApi = require('./api/routes/index');
 const app = express();
-
+var fs = require('fs')
 //Connection with DB
 mongoose.connect("mongodb://localhost:27017/medicine",{useNewUrlParser: true},(error) =>{
     if (!error){
