@@ -1,16 +1,20 @@
-var Mongoodb = require('../models/model')
-const csvFilePath='<path to csv file>'
-const csv=require('csvtojson')
+var Mongoodb = require('../models/model');
+const csv = require('csvtojson');
+const filepath = `${__dirname}/MedicineDataSet.csv`;
+
 
 exports.create=(req,res)=>{
+    res.render('index');
     console.log("Create Function Called");
-}
-exports.find=(req,res)=>{
-    console.log("Find Function Called");
+    console.log(filepath);
     csv()
-    .fromFile("files/MedicineDataSet (2).csv")
+    .fromFile(filepath)
     .then((jsonObj)=>{
     console.log(jsonObj);
-    
 })
+}
+
+exports.find=(req,res)=>{
+    console.log("Find Function Called");
+
 }

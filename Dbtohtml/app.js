@@ -6,7 +6,7 @@ const path = require('path');
 const dotenv = require('dotenv');
 const bodyparser = require('body-parser');
 const connectDB = require('./server/database/connection')
-
+const route = require('./server/routes/router')
 //Setting Env
 dotenv.config({path:'config.env'});
 const PORT = process.env.PORT;
@@ -25,7 +25,6 @@ app.set("view engine","ejs")
 
 //Load Assets
 app.use('/css',express.static(path.resolve(__dirname,"assets/css")));
-
 //Load Routes
-app.use('/',require('./server/routes/router'))
+app.use('/',route)
 
