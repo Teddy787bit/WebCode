@@ -11,16 +11,18 @@ const connectDB = require('../database/connection')
 exports.create = (req, res) => {
     csv()  
     .fromFile(csvfile)  
-    .then((jsonObj)=>{  
-        console.log(jsonObj);  
+    .then(function jobj(jsonObj){  
+        console.log(jsonObj)
+        Medicinedb.insertMany(jsonObj,(err,data)=>{
+            if(err){  
+                console.log(err);  
+            }else{  
+                res.redirect('/');  
+            }  
+        })
+
     })
-    Medicinedb.insertMany(jsonObj,(err,data)=>{
-        if(err){  
-            console.log(err);  
-        }else{  
-            res.redirect('/');  
-        }  
-    })
+    
       }
 
 exports.find = (req, res) => {
