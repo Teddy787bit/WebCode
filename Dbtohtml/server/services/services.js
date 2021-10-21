@@ -6,11 +6,12 @@ exports.homeRoute =(req,res)=>{
 }
 
 exports.updatecsv=(req,res)=>{
-    res.render('index')
+        res.render('index')
+    
 }
 
 exports.showdata = (req, res) => {
-    // Make a get request to /api/users
+    // Make a get request to /api/GetAll
     axios.get('http://localhost:3000/api/GetAll')
         .then(function(response){
             console.log(response.data)
