@@ -7,7 +7,7 @@ var schema = mongoose.Schema(
         n_balance_qty: {type:String,required:true},
         c_packaging	: {type:String,required:true},
         c_unique_code: {type:String,required:true},
-        c_schemes: {type:String,required:true},
+        c_schemes: {type:String},
         n_mrp: {type:String,required:true},
         c_manufacturer: {type:String,required:true},
         hsn_code: {type:String,required:true},
