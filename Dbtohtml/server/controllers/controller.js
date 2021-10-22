@@ -2,11 +2,11 @@ const csv = require('csvtojson');
 const Medicinedb = require('../models/model');
 var csvfile="assets/files/MedicineDataSet.csv";
 const route = require('../routes/router');
-
+//Home Page 
 exports.homeRoute = (req,res)=>{
     res.render('index',{success:""});
 }
-
+//API UploadCsv
 exports.create = (req, res) => {
     csv()
         .fromFile(csvfile)
@@ -34,7 +34,7 @@ exports.create = (req, res) => {
             res.render('index',{success:"Data uploaded successfully"});
         })
 }
-
+//API GetAll
 exports.find = (req, res) => {
     Medicinedb.find()
         .then(medicine => {
