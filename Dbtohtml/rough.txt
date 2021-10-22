@@ -34,3 +34,20 @@ hsn_code = HSN Code : HSN no. of the medicine
                 })
                 console.log(medicine);
                 res.json({success : "Data imported successfully.", status : 200});*/
+
+
+/*
+exports.showdata = (req, res) => {
+    // Make a get request to /api/GetAll
+    axios.get('http://localhost:3000/api/GetAll')
+        .then(function(response){
+            console.log(response.data)
+            res.render('showdata', { medicine : response.data });
+        })
+        .catch(err =>{
+            res.send(err);
+        })
+
+    
+}
+*/

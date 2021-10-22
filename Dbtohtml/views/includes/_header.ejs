@@ -10,8 +10,12 @@
 </head>
 <body>
     <h2 class="h2">Import CSV to MongoDB & Display data from MongoDB</h2>
-    <form action="" method="POST">
-        <a class="button btn btn-outline-primary" href="/uploadCsv">Import CSV</a>
-    </form>
-    
+    <form id="updateCsv" method="POST"  action="/UploadCsv">
+        <a class="button btn btn-outline-primary" onclick="document.getElementById('updateCsv').submit();">Import CSV</a>
+    </form>    
     <a class="button btn btn-outline-success" href="/GetAll">Show Data</a>
+    <% if (success != ''){%>
+    <div class="alert alert-success" role="alert">
+        <%=success%>
+      </div>
+      <%}%>

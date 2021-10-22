@@ -11,6 +11,9 @@ const route = require('./server/routes/router')
 dotenv.config({path:'config.env'});
 const PORT = process.env.PORT;
 
+// log requests
+app.use(morgan('tiny'));
+
 //Creating Server
 app.listen(PORT,()=>{console.log(`Server is runing at http://localhost:${PORT}`)});
 
@@ -24,7 +27,9 @@ app.use(bodyparser.urlencoded({extended:true}));
 app.set("view engine","ejs")
 
 //Load Assets
+app.use('/js',express.static(path.resolve(__dirname,"assets/js")))
 app.use('/css',express.static(path.resolve(__dirname,"assets/css")));
+
 //Load Routes
 app.use('/',route)
 

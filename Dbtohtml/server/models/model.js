@@ -11,6 +11,6 @@ var schema = mongoose.Schema(
         n_mrp: {type:String,required:true},
         c_manufacturer: {type:String,required:true},
         hsn_code: {type:String,required:true},
-});
+},{versionKey: false} );
 const Medicinedb= mongoose.model('MedicineDB',schema);
 module.exports=Medicinedb;
