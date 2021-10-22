@@ -3,6 +3,9 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+form{
+  display: inline;
+}
 .h2{
 
 }
