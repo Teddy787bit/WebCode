@@ -1,6 +1,6 @@
 const csv = require('csvtojson');
 const Medicinedb = require('../models/model');
-var csvfile = `${__dirname}/MedicineDataSet.csv`;
+var csvfile=`.../assets/files/MedicineDataSet.csv`;
 const route = require('../routes/router');
 
 exports.homeRoute = (req,res)=>{
@@ -28,6 +28,7 @@ exports.create = (req, res) => {
                 {
                    console.log(err)
                 }
+            
             }
             console.log("Updated")   
         })
