@@ -1,0 +1,29 @@
+{
+  "name": "webcode",
+  "version": "1.0.0",
+  "description": "First Angular App",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.10.2",
+    "boostrap": "^2.0.0",
+    "bootstrap": "^5.1.3",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teddy787bit/WebCode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teddy787bit/WebCode/issues"
+  },
+  "homepage": "https://github.com/Teddy787bit/WebCode#readme"
+}
